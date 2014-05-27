@@ -118,6 +118,10 @@ func RunUnitCommand(command, unit string) (string, error) {
 		fn = conn.RestartUnit
 	case "reload":
 		fn = conn.ReloadUnit
+	case "mask":
+		fn = conn.MaskUnit
+	case "unmask":
+		fn = conn.UnmaskUnit
 	case "try-restart":
 		fn = conn.TryRestartUnit
 	case "reload-or-restart":
